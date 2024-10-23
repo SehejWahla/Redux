@@ -1,9 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-
+import { Provider } from "react-redux";
+import { store } from "./redux";
+import HomePage from "./components/HomePage";
 function App() {
-  return <>init habitTracker</>;
+  return (
+    <div className="App">
+      <Provider store={store}>
+        <HomePage />
+      </Provider>
+    </div>
+  );
 }
-
 export default App;
